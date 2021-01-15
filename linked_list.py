@@ -7,7 +7,11 @@ class LL:
     def __init__(self, head=None):
         self.head = head
 
-    def insert(self, value):
+    def insert_begin(self, value):
+        node = LLNode(value, self.head)
+        self.head = node
+
+    def insert_end(self, value):
         node = LLNode(value)
         if self.head is None:
             self.head = node
@@ -30,9 +34,10 @@ class LL:
 
 ll = LL()
 ll.printLL()
-ll.insert(10)
+ll.insert_begin(10)
 ll.printLL()
-ll.insert(45)
+ll.insert_begin(45)
 ll.printLL()
-ll.insert(55)
+ll.insert_end(55)
 ll.printLL()
+
