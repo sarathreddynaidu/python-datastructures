@@ -19,6 +19,9 @@ class Stack:
     def size(self):
         return len(self.container)
 
+    def display(self):
+        return self.container
+
 s = Stack()
 s.push(5)
 
@@ -34,7 +37,8 @@ s.push(34)
 s.push(78)
 s.push(12)
 
-print(s)
+print(s.display())
 
 print(s.peek())
 
+print(s.display())
